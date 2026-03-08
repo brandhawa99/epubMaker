@@ -1,0 +1,20 @@
+
+.editor-bold{
+    font-weight: bold;
+}
+.editor-italic{
+    font-style: italic;
+}
+.editor-boldItalic{
+    font-weight: bold;
+    font-style: italic;
+}
+.editor-underline{
+    text-decoration: underline;
+}
+.editor-strikethrough{
+    text-decoration: line-through;
+}
+.editor-underlineStrikethrough{
+    text-decoration: underline line-through;
+}
