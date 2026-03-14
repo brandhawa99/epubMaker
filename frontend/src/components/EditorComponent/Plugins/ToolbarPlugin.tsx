@@ -12,7 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext"
-import { FORMAT_ELEMENT_COMMAND, FORMAT_TEXT_COMMAND, UNDO_COMMAND, REDO_COMMAND, $getSelection, $isRangeSelection, $createParagraphNode, INDENT_CONTENT_COMMAND, OUTDENT_CONTENT_COMMAND, KEY_TAB_COMMAND, COMMAND_PRIORITY_EDITOR, $createTabNode } from "lexical";
+import { FORMAT_ELEMENT_COMMAND, FORMAT_TEXT_COMMAND, UNDO_COMMAND, REDO_COMMAND, $getSelection, $isRangeSelection, $createParagraphNode, INDENT_CONTENT_COMMAND, OUTDENT_CONTENT_COMMAND, KEY_TAB_COMMAND, COMMAND_PRIORITY_EDITOR, $createTabNode, $isElementNode } from "lexical";
 import { INSERT_HORIZONTAL_RULE_COMMAND } from "@lexical/extension";
 import { INSERT_IMAGE_COMMAND } from "./ImagePlugin";
 import { $createHeadingNode, $createQuoteNode, $isHeadingNode, $isQuoteNode, type HeadingTagType } from "@lexical/rich-text";
@@ -108,9 +108,9 @@ export default function ToolbarPlugin(): JSX.Element {
       setIsBold(selection.hasFormat("bold"));
       setIsItalic(selection.hasFormat("italic"));
 
-      const node = anchorNode.getKey() === "root" ? anchorNode : anchorNode.getTopLevelElementOrThrow();
-      const format = node.getFormat();
-      setTextAlign(typeof format === 'string' ? format : "left");
+      if ($isElementNode(element)) {
+        setTextAlign(element.getFormatType() || "left");
+      }
     }
   }, [editor]);
 
