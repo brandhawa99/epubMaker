@@ -18,3 +18,53 @@
 .editor-underlineStrikethrough{
     text-decoration: underline line-through;
 }
+
+.editor-h1{
+    font-size: 33px;
+    font-weight: bold;
+}
+.editor-h2{
+    font-size: 24px;
+    font-weight: bold;
+}
+.editor-h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.editor-quote {
+    border-left: 4px solid #9ca3af;
+    padding-left: 1rem;
+    margin: 0.5rem 0;
+    color: #6b7280;
+}
+
+.editor-dropcap::first-letter {
+    float: left;
+    font-size: 3.3rem;
+    line-height: 0.85;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: bold;
+    margin-right: 0.08em;
+    margin-top: 0.05em;
+}
+
+.image-resizer {
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: #3b82f6;
+    border: 1px solid #fff;
+    bottom: -5px;
+    right: -5px;
+    cursor: nwse-resize;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.image-resizer:hover {
+    background-color: #2563eb;
+    transform: scale(1.2);
+    transition: transform 0.1s ease;
+}

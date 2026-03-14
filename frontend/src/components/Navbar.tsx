@@ -4,7 +4,7 @@ import { Button } from "./ui/button"
 export const NavBar = () => {
   return (
     <div className="flex gap-2 py-2 items-center ">
-      <h1>OtterBooks</h1>
+      {/* <OtterMascot /> */}
       <Button asChild>
         <Link to="/">Home</Link>
       </Button>

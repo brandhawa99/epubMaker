@@ -9,8 +9,6 @@ export default function AppSidebar() {
         <SidebarGroup>
           <SidebarInset>
             <SidebarGroupContent>
-
-
               <SidebarHeader>
               </SidebarHeader>
               <SidebarContent>
