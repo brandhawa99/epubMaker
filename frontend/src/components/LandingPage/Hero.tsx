@@ -4,17 +4,18 @@ import { FaPlayCircle } from "react-icons/fa";
 
 
 export default function Hero() {
+
   return (
     <div>
       <h1 className="flex flex-col pt-20 text-5xl font-bold text-center bg-clip-text text-transparent bg-linear-to-br from-black to-zinc-500">
         <span>
-          Your stories,
+          Stories Worth Keeping
         </span>
         <span>
-          perfectly bound.
+          Your Memories, Beautifully Bound.
         </span>
       </h1>
-      <p className="text-center py-8 text-gray-500">Create professional eBooks with a minimalists interface designed for writers and non-writers alike</p>
+      <p className="mx-auto mt-7 max-w-lg text-balance text-[clamp(1rem,1.9vw,1.18rem)] leading-[1.65] text-gray-700 text-center py-8 text-lg">Create professional eBooks with a minimalists interface designed for writers and non-writers alike</p>
       <div className="flex justify-center gap-4">
         <Button asChild className="rounded-full bg-orange-600 px-6 hover:bg-orange-700 ">
           <Link to="/create">
