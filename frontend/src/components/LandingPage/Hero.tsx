@@ -7,7 +7,7 @@ export default function Hero() {
 
   return (
     <div>
-      <h1 className="flex flex-col pt-20 text-5xl font-bold text-center bg-clip-text text-transparent bg-linear-to-br from-black to-zinc-500">
+      <h1 className="pb-3 flex flex-col pt-20 text-5xl font-bold text-center bg-clip-text text-transparent bg-linear-to-br from-black to-zinc-500">
         <span>
           Stories Worth Keeping
         </span>
