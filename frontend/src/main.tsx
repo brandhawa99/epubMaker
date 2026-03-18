@@ -26,20 +26,20 @@ declare module "@tanstack/react-router" {
   }
 }
 
-posthog.init(import.meta.env.VITE_PUBLIC_POSTHOG_TOKEN, {
-  api_host: import.meta.env.VITE_PUBLIC_POSTHOG_HOST,
-  defaults: "2026-01-30"
-})
+// const posthogOptions = {
+//   api_host: import.meta.env.VITE_PUBLIC_POSTHOG_HOST,
+//   defaults: "2026-01-30"
+// } as const
 
 const rootElement = document.getElementById("root")!
 
 if (!rootElement.innerHTML) {
   const root = ReactDom.createRoot(rootElement)
   root.render(
-    <PostHogProvider client={posthog}>
-      <QueryClientProvider client={queryCLient}>
-        <RouterProvider router={router} />
-      </QueryClientProvider>
-    </PostHogProvider>
+    // <PostHogProvider apiKey={import.meta.env.VITE_PUBLIC_POSTHOG_KEY} options={posthogOptions}>
+    <QueryClientProvider client={queryCLient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+    // </PostHogProvider>
   )
 }

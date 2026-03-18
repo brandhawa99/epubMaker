@@ -54,7 +54,7 @@ export default function Editor({ }: Props): JSX.Element {
     nodes: [HeadingNode, ParagraphNode, QuoteNode, DropCapNode, HorizontalRuleNode, ImageNode]
   }
   return (
-    <div className="relative border-black border-2 rounded-2xl m-5">
+    <div className="relative border-black border-2 rounded-2xl mb-5">
       <LexicalComposer initialConfig={initialConfig}>
         <ToolbarPlugin />
         <RichTextPlugin
